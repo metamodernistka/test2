@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro {
     background: url("/img/head1.png") center top no-repeat;
+    background-size: 100%;
     width: 100%;
     height: 631px;
 }
@@ -344,10 +345,12 @@ padding: 15px 19px 15px 20px;
 
 .section--works {
     background: url("/img/works.png") center no-repeat;
+    background-size: 100%;
 }
 
 .works-title {
     padding-top: 20px;
+    padding-bottom: 70px;
     text-align: center;
     color: #CDE8F6;
     font-family: 'Lora',sans-serif;
@@ -355,13 +358,33 @@ padding: 15px 19px 15px 20px;
     font-weight: bold;
 }
 
+.card_wrapper {
+    display: none;
+    width: 100%;
+    height: 371px;
+    position: relative;
+}
+
+.card_wrapper.active {
+    display: block;
+}
+
 .card {
-    padding-top: 70px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    height: 371px;
+}
+
+.wrapper-flex {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
 .card-item {
+    display: flex;
     width: 582px;
     height: 371px;
 
@@ -384,17 +407,62 @@ padding: 15px 19px 15px 20px;
     border-radius: 50%;
     width: 14px;
     height: 15px;
-    background-color: #CDE8F6;
+    background-color: #c2cdde;
     margin-right: 26px;
     opacity: .7;
+    cursor: pointer;
+    transition: background-color .2s linear;
 }
 
-.sliders--active {
+.pic_slider:hover .onlyThis {
+    opacity: 1;
+    display: block;
+}
+
+.pic_slider:hover {
+    opacity: 0.3;
+    transition: opacity .2s linear;
+}
+
+.onlyThis {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity .2s linear;
+}
+
+.sliders:hover {
+    background-color: rgba(196, 94, 141, 0.62);
+}
+
+.sliders.active {
     opacity: 1;
 }
 
 .sliders:last-child {
     margin-right: 0;
+}
+
+#btn-prev, #btn-next {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: #CDE8F6;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+}
+
+#btn-prev:hover, #btn-next:hover {
+    opacity: 0.6;
+}
+
+#btn-next {
+    left: auto;
+    right: 0;
 }
 
 .section--works {
@@ -441,7 +509,8 @@ padding: 15px 19px 15px 20px;
 }
 
 .footer {
-    background: url("/img/footer.png");
+    background: url("/img/footer.png") no-repeat;
+    background-size: 100%;
 }
 
 .footer-title {
