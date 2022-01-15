@@ -362,7 +362,6 @@ padding: 15px 19px 15px 20px;
     display: none;
     width: 100%;
     height: 371px;
-    position: relative;
 }
 
 .card_wrapper.active {
@@ -377,10 +376,30 @@ padding: 15px 19px 15px 20px;
     height: 371px;
 }
 
+#btn-prev, #btn-next {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: #CDE8F6;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+}
+
+#btn-prev:hover, #btn-next:hover {
+    opacity: 0.6;
+}
+
+#btn-next {
+    left: auto;
+    right: 0;
+}
+
 .wrapper-flex {
     display: flex;
     justify-content: space-between;
-    position: relative;
 }
 
 .card-item {
@@ -414,22 +433,33 @@ padding: 15px 19px 15px 20px;
     transition: background-color .2s linear;
 }
 
-.pic_slider:hover .onlyThis {
-    opacity: 1;
-    display: block;
+.wrapper-item:hover {
+    opacity: 0.5;
+    transition: opacity .2s linear;
+    position: relative;
 }
 
-.pic_slider:hover {
-    opacity: 0.3;
-    transition: opacity .2s linear;
+.wrapper-item:hover .onlyThis {
+    opacity: 1;
+    color: white;
+    font-weight: bold;
+    z-index: 10000;
+    text-align: center;
 }
 
 .onlyThis {
-    display: block;
+    width: 100%;
+
+    text-align: center;
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+
     position: absolute;
     opacity: 0;
     z-index: 2;
-    transition: opacity .2s linear;
+    overflow: hidden;
+    /*transition: opacity .2s linear;*/
 }
 
 .sliders:hover {
@@ -442,27 +472,6 @@ padding: 15px 19px 15px 20px;
 
 .sliders:last-child {
     margin-right: 0;
-}
-
-#btn-prev, #btn-next {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 50px;
-    background-color: #CDE8F6;
-    opacity: 0.4;
-    cursor: pointer;
-    transition: opacity .2s ease-in-out;
-}
-
-#btn-prev:hover, #btn-next:hover {
-    opacity: 0.6;
-}
-
-#btn-next {
-    left: auto;
-    right: 0;
 }
 
 .section--works {
