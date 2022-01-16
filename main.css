@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro {
     background: url("/img/head1.png") center top no-repeat;
-    background-size: 100%;
+    background-size: cover;
     width: 100%;
     height: 631px;
 }
@@ -345,7 +345,7 @@ padding: 15px 19px 15px 20px;
 
 .section--works {
     background: url("/img/works.png") center no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .works-title {
@@ -517,7 +517,7 @@ padding: 15px 19px 15px 20px;
 
 .footer {
     background: url("/img/footer.png") no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .footer-title {
@@ -789,12 +789,17 @@ padding: 15px 19px 15px 20px;
         width: 540px;
     }
 
+    .card-item {
+        width: 260px;
+        align-items: center;
+    }
+
     .card {
         height: 196px;
     }
 
     .card_wrapper {
-        height: 241px;
+        height: 209px;
     }
 
     .pic_slider {
@@ -961,20 +966,30 @@ padding: 15px 19px 15px 20px;
     }
 
     .card {
-        height: 96px;
+        height: 104px;
+        padding-top: 0;
+    }
+
+    .card-item {
+        width: 152px;
+        height: 127px;
     }
 
     .card_wrapper {
-        height: 141px;
+        height: 138px;
     }
 
     .pic_slider {
-        width: 137px;
-        height: 96px;
+        width: 136px;
+        height: 104px;
     }
 
     #btn-prev, #btn-next {
         width: 32px;
+    }
+
+    .works-title {
+        padding-bottom: 38px;
     }
 
     .img-content {
@@ -990,10 +1005,6 @@ padding: 15px 19px 15px 20px;
         font-size: 25px;
     }
 
-    .card-item {
-        width: 137px;
-        height: 89px;
-    }
 
     .sliders {
         width: 11px;
@@ -1019,9 +1030,9 @@ padding: 15px 19px 15px 20px;
         opacity: 0.7;
     }
 
-    .card {
-        justify-content: space-evenly;
-    }
+    /*.card {*/
+    /*    justify-content: space-evenly;*/
+    /*}*/
 }
 
 
