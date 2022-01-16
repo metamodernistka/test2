@@ -406,8 +406,6 @@ padding: 15px 19px 15px 20px;
     display: flex;
     width: 582px;
     height: 371px;
-
-    background-color: #8CD6E5;
 }
 
 .item1 {
@@ -581,6 +579,18 @@ padding: 15px 19px 15px 20px;
         width: 960px;
     }
 
+    .intro {
+        background-size: cover;
+    }
+
+    .section--works {
+        background-size: cover;
+    }
+
+    .footer {
+        background-size: cover;
+    }
+
     .content-col--first  {
         width: 33%;
         text-align: end;
@@ -639,9 +649,18 @@ padding: 15px 19px 15px 20px;
         padding: 7px 41px;
     }
 
+
     .card-item {
+        width: auto;
+        height: 371px;
+    }
+    .pic_slider {
         width: 450px;
         height: 371px;
+    }
+
+    #btn-prev, #btn-next {
+        height: 100%;
     }
 
     .item1 {
@@ -676,6 +695,23 @@ padding: 15px 19px 15px 20px;
         width: 720px;
     }
 
+   .pic_slider {
+       width: 354px;
+       height: 229px;
+   }
+
+   #btn-prev, #btn-next {
+       height: 100%;
+   }
+
+   .card {
+       height: 229px;
+   }
+
+   .card_wrapper {
+       height: 229px;
+   }
+
     .content-col--first  {
         width: 29%;
         text-align: center;
@@ -695,7 +731,7 @@ padding: 15px 19px 15px 20px;
 
     .content-col--third {
         width: 30%;
-        text-align: left;
+        text-align: center;
         display: flex;
     }
 
@@ -751,6 +787,19 @@ padding: 15px 19px 15px 20px;
 @media screen and (max-width: 768px) {
     .container {
         width: 540px;
+    }
+
+    .card {
+        height: 196px;
+    }
+
+    .card_wrapper {
+        height: 241px;
+    }
+
+    .pic_slider {
+        width: 260px;
+        height: 196px;
     }
 
     .header-inner {
@@ -909,6 +958,23 @@ padding: 15px 19px 15px 20px;
 @media screen and (max-width: 576px) {
     .container {
         width: 90%;
+    }
+
+    .card {
+        height: 96px;
+    }
+
+    .card_wrapper {
+        height: 141px;
+    }
+
+    .pic_slider {
+        width: 137px;
+        height: 96px;
+    }
+
+    #btn-prev, #btn-next {
+        width: 32px;
     }
 
     .img-content {
